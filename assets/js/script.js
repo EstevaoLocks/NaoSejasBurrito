@@ -28,3 +28,6 @@ const nav = document.getElementsByTagName("nav")[0];
 hamburgerBtn.addEventListener("click", () => {
   nav.classList.toggle("active");
 });
+
+larguraBtnNewsletter = document.querySelector(".newsletterSection form button").offsetWidth;
+document.documentElement.style.setProperty("--inputSize-mediaCell", `${larguraBtnNewsletter}px`);

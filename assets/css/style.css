@@ -1,3 +1,8 @@
+:root {
+    --inputSize-mediaCell: 0;
+    --btnSize-mediaCell: 0;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -155,7 +160,7 @@ h2 {
     transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 880px) {
     nav {
         min-height: 80px;
     }
@@ -857,4 +862,140 @@ footer hr {
 
     background-color: #880D1E;
     text-align: center;
+}
+
+@media (max-width: 769px) {
+    .titlePrimary {
+        color: #50514f;
+        font-size: 32px;
+    }
+
+    .titleSecondary {
+        color: #F2CC8F;
+        font-size: 32px;
+    }
+
+    .titleTertiary {
+        color: #F4F1DE;
+        font-size: 32px;
+    }
+
+    .subtitlePrimary {
+        color: #50514f;
+        font-size: 24px;
+    }
+
+    .subtitleTertiary {
+        color: #F4F1DE;
+        font-size: 24px;
+    }
+
+    .subtitleQuaternary {
+        color: #E07A5F;
+        font-size: 24px;
+    }
+
+    .posSubtitleTertiary {
+        color: #F4F1DE;
+        font-size: 16px;
+    }
+
+    .posSubtitleQuaternary {
+        color: #E07A5F;
+        font-size: 16px;
+    }
+
+    .msgHeader-container{
+        max-width: 100%;
+    }
+
+    .tiposReceita-title {
+        width: 70%;
+    }
+
+    .receitasSemana-section .titleSecondary {
+        text-align: center;
+    }
+
+    .cardReceitaSemana {
+        flex-direction: column;
+    }
+
+    .containerEsquerda-receitaSemana {
+        width: 100%;
+        padding: 40px 40px 20px 40px;
+    }
+    
+    .containerDireita-receitaSemana {
+        width: 100%;
+        padding: 20px 40px 40px 40px;
+    }
+
+    .cardReceitaSemana .logo-container {
+        margin-top: 24px;
+    }
+
+    .sectionPratosTipicos .logo {
+        padding-top: 24px;
+        font-size: 28px;
+    }
+
+    .sectionPratosTipicos .row {
+        flex-direction: column;
+    }
+
+    .imgPratoTipico-container {
+        width: 100%;
+    }
+ 
+    .imgPratoTipico-container img {
+        margin-top: 24px;
+        margin-bottom: 24px;
+    }
+
+    .infoPratoTipico-col {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .newsletterSection .logo-container {
+        width: 100%;
+    }
+
+    .newsletterSection .logo {
+        font-size: 28px;
+        text-align: end;
+    }
+
+    .posSubtitleTertiary {
+        margin-top: 24px;
+    }
+
+    .newsletterSection form {
+        width: 100%;
+        padding: 0;
+
+        display: flex;
+        justify-content: end;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 0;
+    }
+
+    .newsletterSection form input {
+        width: 125px;
+        padding: 16px 16px;
+        border-radius: 16px;
+
+        font-size: 16px;
+    }
+
+    .newsletterSection form button {
+        padding: 16px 16px;
+        border-radius: 16px;
+
+        font-size: 16px;
+    } 
 }
