@@ -21,3 +21,10 @@ function socialIconsAlert() {
     window.open("https://github.com/estevaolocks", "_blank");
   }
 }
+
+//  Menu Toggle
+const hamburgerBtn = document.querySelector(".hamburgerBtn");
+const nav = document.getElementsByTagName("nav")[0];
+hamburgerBtn.addEventListener("click", () => {
+  nav.classList.toggle("active");
+});
