@@ -607,7 +607,6 @@ h2 {
     height: 200px;
 
     padding: 32px;
-    background-color: #E07A5F;
 
     overflow: hidden;
     border-radius: 24px;
@@ -616,9 +615,13 @@ h2 {
 }
 .cardPratosTipicos.v1 article {
     background-color: #E07A5F;
+    /* background-color: #e7957e; */
+    /* border: 2px solid #E07A5F; */
 }
 .cardPratosTipicos.v2 article {
     background-color: #880D1E;
+    /* background-color: #9a343e; */
+    /* border: 2px solid #880D1E; */
 }
 
 .cardPratosTipicos * {
@@ -635,7 +638,7 @@ h2 {
     font-size: 16px;
 }
 
-.cardPratosTipicos div {
+.cardPratosTipicos .descricao {
     font-size: 14px;
 }
 
@@ -662,24 +665,31 @@ h2 {
     left: 0;
 
     width: 100%;
-    height: 64px;
+    height: 68px;
     padding: 0 32px 32px 32px;
-
-    
-    /* 1. O efeito de desfoque */
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4deg);
-    
-    /* 3. A Mágica: Máscara para transparência superior */
-    -webkit-mask-image: linear-gradient(to top, transparent 0%, black 50%);
-    mask-image: linear-gradient(to top, transparent 0%, black 50%);
 }
 
+.cardPratosTipicos.v1 .blurPratosTipicos {
+    background: linear-gradient(
+        to top,
+        #E07A5F 60%,
+        rgba(255,255,255,0)
+    );
+}
+
+.cardPratosTipicos.v2 .blurPratosTipicos {
+    background: linear-gradient(
+        to top,
+        #880D1E 60%,
+        rgba(255,255,255,0)
+    );
+}
  /* ----------------- */
 
 .link-container {
     display: flex;
     justify-content: flex-end;
+    text-align: end;
 
     margin-top: 16px;
 }
@@ -692,11 +702,13 @@ h2 {
 
 .link-container p {
     transition: all 0.3s ease;
+    width: fit-content;
 }
 
 .link-container a {
     display: flex;
     align-items: center;
+    justify-content: flex-end;
 
     gap: 16px;
 }
