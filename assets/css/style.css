@@ -604,7 +604,21 @@ h2 {
 
 .cardPratosTipicos article {
     width: 500px;
-    height: 200px;
+    max-height: 200px;
+    min-height: 199px;
+
+    padding: 32px;
+
+    overflow: hidden;
+    border-radius: 24px;
+
+    position: relative;
+    transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.cardPratosTipicos article.active {
+    width: 500px;
+    max-width: 700px;
 
     padding: 32px;
 

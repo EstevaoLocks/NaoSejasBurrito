@@ -29,5 +29,16 @@ hamburgerBtn.addEventListener("click", () => {
   nav.classList.toggle("active");
 });
 
+// Tentativa frustrada de diminuir tamanho btn
 larguraBtnNewsletter = document.querySelector(".newsletterSection form button").offsetWidth;
 document.documentElement.style.setProperty("--inputSize-mediaCell", `${larguraBtnNewsletter}px`);
+
+// função de expandir cards
+document.querySelectorAll(".verMaisPratosTipicos").forEach(link => { // laço para pegar links retornados em lista
+  link.addEventListener("click", function(e) {
+    e.preventDefault();
+    
+    const card = this.closest("article");
+    card.classList.toggle("active");
+  });
+});
