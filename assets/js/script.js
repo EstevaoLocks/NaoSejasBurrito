@@ -22,6 +22,13 @@ function socialIconsAlert() {
   }
 }
 
+document.querySelectorAll(".linkSocialFooter").forEach(link => {
+  link.addEventListener('click', function(e){
+    e.preventDefault();
+    socialIconsAlert();
+  });
+});
+
 //  Menu Toggle
 const hamburgerBtn = document.querySelector(".hamburgerBtn");
 const nav = document.getElementsByTagName("nav")[0];
