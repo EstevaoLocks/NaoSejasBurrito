@@ -33,12 +33,107 @@ hamburgerBtn.addEventListener("click", () => {
 larguraBtnNewsletter = document.querySelector(".newsletterSection form button").offsetWidth;
 document.documentElement.style.setProperty("--inputSize-mediaCell", `${larguraBtnNewsletter}px`);
 
-// função de expandir cards
+let initHeight = "";
+
+// função de expandir cards (Receita Semana)
+document.querySelectorAll(".verMaisReceitaSemana").forEach(link => { // laço para pegar links retornados em lista
+  link.addEventListener("click", function(e) {
+    e.preventDefault();
+    
+    // const card = this.closest("article");
+    // card.classList.toggle("active");
+
+    const card = this.closest(".cardReceitaSemana");
+
+    
+    if (!card.classList.contains("active")) {
+      // Antes de expandir, pega a altura total
+      initHeight = card.clientHeight + "px";
+      card.style.height = initHeight;
+      card.classList.add("active");
+      
+      // Força um reflow e depois define a altura total
+      card.offsetHeight; // Isso força o navegador a recalcular
+      card.style.height = card.scrollHeight + "px";
+
+      card.lastElementChild.querySelector(".verMaisPratosTipicos").children[0].innerHTML = "Ver menos";
+
+    } else {
+      // Para recolher
+      card.style.height = card.clientHeight + 32 + "px";
+      card.classList.remove("active");
+      
+      // Força um reflow e depois define a altura inicial
+      card.offsetHeight;
+      card.style.height = initHeight; // Altura inicial
+      
+      card.lastElementChild.querySelector(".verMaisPratosTipicos").children[0].innerHTML = "Ver mais";
+    }
+  });
+});
+
+// função de expandir cards (Receitas Tipicas)
 document.querySelectorAll(".verMaisPratosTipicos").forEach(link => { // laço para pegar links retornados em lista
   link.addEventListener("click", function(e) {
     e.preventDefault();
     
+    // const card = this.closest("article");
+    // card.classList.toggle("active");
+
     const card = this.closest("article");
-    card.classList.toggle("active");
+
+    
+    if (!card.classList.contains("active")) {
+      // Antes de expandir, pega a altura total
+      initHeight = card.clientHeight + "px";
+      card.style.height = initHeight;
+      card.classList.add("active");
+      
+      // Força um reflow e depois define a altura total
+      card.offsetHeight; // Isso força o navegador a recalcular
+      card.style.height = card.scrollHeight + "px";
+
+      card.lastElementChild.querySelector(".verMaisPratosTipicos").children[0].innerHTML = "Ver menos";
+
+    } else {
+      // Para recolher
+      card.style.height = card.clientHeight + "px";
+      card.classList.remove("active");
+      
+      // Força um reflow e depois define a altura inicial
+      card.offsetHeight;
+      card.style.height = initHeight; // Altura inicial
+      
+      card.lastElementChild.querySelector(".verMaisPratosTipicos").children[0].innerHTML = "Ver mais";
+    }
   });
 });
+
+function ordenarCards() {
+  // Alterando sequencia cards v2 (vermelhos)
+  const wdtViewport = window.innerWidth;
+  
+  //procura cards com class do card + v2 e faz um laço
+  document.querySelectorAll(".cardPratosTipicos.v2").forEach(cardV2 => {
+    
+    if (wdtViewport <= 780) {
+      const figCard = cardV2.querySelector("figure");
+      const articleCard = cardV2.querySelector("article");
+    
+      cardV2.insertBefore(figCard, articleCard)
+    
+    }else {
+      if (cardV2.firstChild.tagName === 'figure') {
+        const figCard = cardV2.querySelector("figure");
+        const articleCard = cardV2.querySelector("article");
+      
+        cardV2.insertBefore(articleCard, figCard)
+      };
+    };
+  });
+};
+
+// Deixa cards na ordem correta no inicio da aplicação
+ordenarCards();
+// Deixa cards na ordem correta sempre que a tela for redimensionada
+window.addEventListener('resize', ordenarCards());

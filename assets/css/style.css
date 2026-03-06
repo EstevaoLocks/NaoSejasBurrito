@@ -563,6 +563,96 @@ h2 {
     justify-self: flex-end;
 }
 
+.cardReceitaSemana footer {
+    display: none;
+}
+
+.cardReceitaSemana .blurPratosTipicos {
+    display: none;
+}
+
+@media (max-width: 880px){
+    .cardReceitaSemana {
+        height: 700px;
+
+        overflow: hidden;
+        position: relative;
+        padding-bottom: 64px;
+
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    .containerEsquerda-receitaSemana {
+        width: 100%;
+        min-height: auto;
+        padding: 40px 40px 0 40px;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 16px;
+    }
+
+    .containerDireita-receitaSemana {
+        width: 100%;
+        min-height: auto;
+        padding: 40px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    .cardReceitaSemana footer {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        
+        display: flex;
+        justify-content: space-between;
+        
+        width: 100%;
+        padding: 0 40px 40px 40px;
+    }
+    .cardReceitaSemana  .verMaisReceitaSemana {
+        margin-top: 16px;
+    }
+
+    .cardReceitaSemana .blurPratosTipicos {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+        width: 100%;
+        height: 90px;
+        padding: 0 32px 32px 32px;
+        background: linear-gradient(
+            to top,
+            #9a343e 60%,
+            rgba(255,255,255,0)
+        );
+    }
+
+    .cardReceitaSemana.v1 .blurPratosTipicos {
+        background: linear-gradient(
+            to top,
+            #E07A5F 60%,
+            rgba(255,255,255,0)
+        );
+    }
+
+    .cardReceitaSemana.v2 .blurPratosTipicos {
+        background: linear-gradient(
+            to top,
+            #880D1E 60%,
+            rgba(255,255,255,0)
+        );
+    }
+}
+
  /* ----------- Section Pratos Típicos ---------- */
 .sectionPratosTipicos {
     padding: 40px 0;
@@ -580,6 +670,7 @@ h2 {
 
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 16px;
 
     color: #F4F1DE;
@@ -604,8 +695,7 @@ h2 {
 
 .cardPratosTipicos article {
     width: 500px;
-    max-height: 200px;
-    min-height: 199px;
+    height: 200px;
 
     padding: 32px;
 
@@ -613,25 +703,19 @@ h2 {
     border-radius: 24px;
 
     position: relative;
-    transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    transition: height 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .cardPratosTipicos article.active {
-    width: 500px;
-    max-width: 700px;
-
-    padding: 32px;
-
-    overflow: hidden;
-    border-radius: 24px;
-
-    position: relative;
+    transition: height 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
+
 .cardPratosTipicos.v1 article {
     background-color: #E07A5F;
     /* background-color: #e7957e; */
     /* border: 2px solid #E07A5F; */
 }
+
 .cardPratosTipicos.v2 article {
     background-color: #880D1E;
     /* background-color: #9a343e; */
@@ -654,6 +738,7 @@ h2 {
 
 .cardPratosTipicos .descricao {
     font-size: 14px;
+    padding-bottom: 40px;
 }
 
 .cardPratosTipicos footer {
@@ -721,6 +806,9 @@ h2 {
 .link-container p {
     transition: all 0.3s ease;
     width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 }
 
 .link-container a {
@@ -744,6 +832,40 @@ h2 {
     transform: scale(1.03) ;
     color: #f2cc8f;
 }
+
+/* Pratos Tipicos -> responsividade */
+@media (max-width: 780px) {
+    .cardPratosTipicos {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .cardPratosTipicos figure {
+        width: 300px;
+    }
+
+    .cardPratosTipicos article {
+        width: 300px;
+        height: 300px;
+
+        padding: 24px;
+    }
+}
+
+@media (max-width: 340px) {
+    .cardPratosTipicos figure {
+        width: 90vw;
+    }
+
+    .cardPratosTipicos article {
+        width: 90vw;
+        height: 90vw;
+
+        padding: 24px;
+    }
+}
+
+/* -------------------------------- */
 
 .newsletterSection {
     background-color: #E07A5F;
