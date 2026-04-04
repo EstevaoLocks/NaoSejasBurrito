@@ -4,7 +4,7 @@
 }
 
 * {
-    box-sizing: border-box;
+    box-sizing: border-box !important;
 }
 
 /* Fonte Imbue */
@@ -251,7 +251,7 @@ h2 {
 /* ------------------------------ */
 
 .pageHeader {
-    background-image: url("../img/comidaMexicana_background.png");
+    background-image: url("./../assets/img/comidaMexicana_background.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
