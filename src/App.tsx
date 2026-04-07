@@ -1,6 +1,7 @@
 import './styles/reset.css'
 import './styles/App.css'
 import { Navbar } from './components/Navbar'
+import { CardReceitaTaco } from './components/CardReceitaTaco'
 
 // Imagens
 import burritoPratoSemFundo from './assets/img/burrito_prato_semFundo.png'
@@ -87,9 +88,13 @@ function App() {
                 </figure>
               </a>
 
-
             </div>
           </div>
+        </section>
+        
+        <section id="receitaSemana" className="receitasSemana-section">
+            <h2 className="titleSecondary">Receita da Semana</h2>
+            <CardReceitaTaco />
         </section>
       </main>
     </>
