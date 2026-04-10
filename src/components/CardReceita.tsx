@@ -6,6 +6,24 @@ type CardReceitaProps = {
     receita: "taco" | "chili-mexicano" | "pozole" | "guacamole" | "banderillas-mexicanas";
 }
 
+type Receita = {
+    nome: string;
+    categoria: "Lanches" | "Caldos" | "Molhos" | "Petiscos";
+    descricao: string;
+    ingredientes: string[];
+    modoPreparo: string[];
+}
+
+const txtReceitas: Record<string, Receita>= {
+    taco: {
+        nome: "Tacos",
+        categoria: "Lanches",
+        descricao: "Tacos são pratos típicos da culinária mexicana, feitos com tortillas de milho ou trigo recheadas com carne, frango, peixe ou vegetais. São servidos com molhos e acompanhamentos como cebola, tomate e guacamole.",
+        ingredientes: [],
+        modoPreparo: []
+    }
+};
+
 export function CardReceita( { receita }: CardReceitaProps ) {
     switch (receita) {
         case "chili-mexicano":
@@ -117,6 +135,12 @@ export function CardReceita( { receita }: CardReceitaProps ) {
                 </div>
             )
             break;
+
+        // case "pozole":
+        //     return (
+
+        //     )
+        //     break;
 
         case "taco":
             return (
@@ -238,8 +262,6 @@ export function CardReceita( { receita }: CardReceitaProps ) {
             )
         break;
 
-        case "pozole":
-            break;
 
         case "guacamole":
             break;
