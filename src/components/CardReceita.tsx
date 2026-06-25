@@ -24,6 +24,7 @@ const txtReceitas: Record<string, Receita>= {
     }
 };
 
+
 export function CardReceita( { receita }: CardReceitaProps ) {
     switch (receita) {
         case "chili-mexicano":
