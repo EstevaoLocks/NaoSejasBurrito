@@ -11,8 +11,9 @@ type Receita = {
     categoria: "Lanches" | "Caldos" | "Molhos" | "Petiscos";
     descricao: string;
     mais1secaoIngredientes: boolean;
+    mais1secaoModoPreparo: boolean;
     ingredientes: string[][];
-    modoPreparo: string[];
+    modoPreparo: string[][];
 }
 
 const txtReceitas: Record<string, Receita>= {
@@ -21,6 +22,7 @@ const txtReceitas: Record<string, Receita>= {
         categoria: "Lanches",
         descricao: "Tacos são pratos típicos da culinária mexicana, feitos com tortillas de milho ou trigo recheadas com carne, frango, peixe ou vegetais. São servidos com molhos e acompanhamentos como cebola, tomate e guacamole.",
         mais1secaoIngredientes: true,
+        mais1secaoModoPreparo: false,
         ingredientes: [['Massa',
                 '2 xícaras de farinha de milho pré-cozida da marca venezuelana PAN (branco ou amarelo)',
                 '2 xícaras de água (480 mililitros)',
@@ -35,14 +37,16 @@ const txtReceitas: Record<string, Receita>= {
             ]
         ],
         modoPreparo: [
-            'Prepare a massa de taco caseira (que também pode ser usada como massa burrito): coloque a água e a manteiga (opcional) numa tigela e, pouco a pouco, enquanto mexe com a mão, adicione a farinha e o sal. Misture e amasse bem para desfazer os grumos.',
-            'À medida que mistura e amassa, poderá sentir que a massa de tacos está ficando mais consistente. Após amassar por 5 minutos, modele em forma de bola e reserve na geladeira por 10 minutos.',
-            'Após esse tempo pegue novamente na massa e volte a amassar. Separe porções, modele em forma de bolinhas e coloque num prato.',
-            'Coloque uma das bolinhas de massa numa tábua de cozinha forrada com plástico filme, para não grudar. Espalme a bolinha de massa com a mão, cubra com um pedaço de plástico filme e abra com a ajuda de um rolo.',
-            'Desgrude o plástico de cima e use uma tigela para cortar o disco de massa, como na foto. Coloque num prato e repita o procedimento com as restantes bolinhas de massa para tacos, empilhando os discos de massa no prato.',
-            'Para cozinhar a massa de tacos simplesmente leve ao fogo alto uma frigideira (sem untar) e coloque um disco de massa. Deixe até dourar, vire e deixe por mais uns segundinhos, para dourar desse lado também. Retire para um prato ou grade de resfriamento e repita.',
-            'Enquanto isso prepare o recheio de carne do taco mexicano! Para simplificar o preparo sugerimos simplesmente fritar ou grelhar carne de porco da sua preferência, temperando com sal e suco de limão. Depois retire e pique em pedacinhos, como na foto.',
-            'Finalmente monte os tacos mexicanos: coloque uma porção de carne no centro da massa, e adicione cebola roxa picada. Se quiser, poderá completar também com guacamole, alface, queijo cheddar ou oaxaca (queijo branco mexicano). Sirva com uma cervejinha e bom apetite!'
+            [
+                'Prepare a massa de taco caseira (que também pode ser usada como massa burrito): coloque a água e a manteiga (opcional) numa tigela e, pouco a pouco, enquanto mexe com a mão, adicione a farinha e o sal. Misture e amasse bem para desfazer os grumos.',
+                'À medida que mistura e amassa, poderá sentir que a massa de tacos está ficando mais consistente. Após amassar por 5 minutos, modele em forma de bola e reserve na geladeira por 10 minutos.',
+                'Após esse tempo pegue novamente na massa e volte a amassar. Separe porções, modele em forma de bolinhas e coloque num prato.',
+                'Coloque uma das bolinhas de massa numa tábua de cozinha forrada com plástico filme, para não grudar. Espalme a bolinha de massa com a mão, cubra com um pedaço de plástico filme e abra com a ajuda de um rolo.',
+                'Desgrude o plástico de cima e use uma tigela para cortar o disco de massa, como na foto. Coloque num prato e repita o procedimento com as restantes bolinhas de massa para tacos, empilhando os discos de massa no prato.',
+                'Para cozinhar a massa de tacos simplesmente leve ao fogo alto uma frigideira (sem untar) e coloque um disco de massa. Deixe até dourar, vire e deixe por mais uns segundinhos, para dourar desse lado também. Retire para um prato ou grade de resfriamento e repita.',
+                'Enquanto isso prepare o recheio de carne do taco mexicano! Para simplificar o preparo sugerimos simplesmente fritar ou grelhar carne de porco da sua preferência, temperando com sal e suco de limão. Depois retire e pique em pedacinhos, como na foto.',
+                'Finalmente monte os tacos mexicanos: coloque uma porção de carne no centro da massa, e adicione cebola roxa picada. Se quiser, poderá completar também com guacamole, alface, queijo cheddar ou oaxaca (queijo branco mexicano). Sirva com uma cervejinha e bom apetite!'
+            ]
         ]
     },
 
@@ -51,6 +55,7 @@ const txtReceitas: Record<string, Receita>= {
         categoria: "Caldos",
         descricao: "O Chili Mexicano é um prato tradicional da culinária mexicana, conhecido por sua combinação de sabores picantes e reconfortantes. Ele é feito com carne moída, feijão, tomate, cebola e uma variedade de temperos, como cominho, pimenta chili e alho.",
         mais1secaoIngredientes: false,
+        mais1secaoModoPreparo: false,
         ingredientes: [
             [
                 '1 ½ xícara (chá) de feijão-rosinha',
@@ -67,24 +72,91 @@ const txtReceitas: Record<string, Receita>= {
             ]
         ],
         modoPreparo: [
-            'Primeiramente, lave o feijão e despeje em uma panela de pressão. Cubra com água a panela.',
-            'Leve ao fogo até que pegue pressão. A partir daí, deixe no máximo por mais 20 minutos em fogo alto.',
-            'Logo em seguida, coe o feijão e reserve.',
-            'Em uma panela, coloque o óleo e refogue o alho e a cebola e acrescente a carne moída.',
-            'Mexa até que comece a dessorar a carne.',
-            'Então, acrescente uma colher ( chá) do mix de pimentas e misture. A pimenta aqui é a gosto, você pode usar na Receita de Chilli Mexicano as que mais tem costume.',
-            'Por fim, assim que a carne estiver dourada, acrescente os tomates, a páprica doce e o cominho. Deixe cozinhar por 20 minutos.',
-            'Se precisar, acrescente um pouco de água. Prove o sal e acrescente os grãos do feijão.',
-            'Deixe a Receita de Chilli Mexicano cozinhar por mais 10 minutos e desligue o fogo. Salpique salsinha ou queijo por cima, fica ótimo.',
-            'Sirva com as tortillhas e salsa mexicana, fica delicioso.'
+            [
+                'Primeiramente, lave o feijão e despeje em uma panela de pressão. Cubra com água a panela.',
+                'Leve ao fogo até que pegue pressão. A partir daí, deixe no máximo por mais 20 minutos em fogo alto.',
+                'Logo em seguida, coe o feijão e reserve.',
+                'Em uma panela, coloque o óleo e refogue o alho e a cebola e acrescente a carne moída.',
+                'Mexa até que comece a dessorar a carne.',
+                'Então, acrescente uma colher ( chá) do mix de pimentas e misture. A pimenta aqui é a gosto, você pode usar na Receita de Chilli Mexicano as que mais tem costume.',
+                'Por fim, assim que a carne estiver dourada, acrescente os tomates, a páprica doce e o cominho. Deixe cozinhar por 20 minutos.',
+                'Se precisar, acrescente um pouco de água. Prove o sal e acrescente os grãos do feijão.',
+                'Deixe a Receita de Chilli Mexicano cozinhar por mais 10 minutos e desligue o fogo. Salpique salsinha ou queijo por cima, fica ótimo.',
+                'Sirva com as tortillhas e salsa mexicana, fica delicioso.'
+            ]
         ]
     },
 
-    exemplo: {
-        nome: '',
-        categoria: 'Caldos',
-        descricao: '',
+    pozole: {
+        nome: "Pozole",
+        categoria: "Caldos",
+        descricao: "O pozole é um prato tradicional cheio de história, sabores intensos e simbolismo cultural. Sua base é o hominy (grãos de milho tratados de forma especial) cozido por horas, combinado com carnes, temperos e acompanhamentos frescos.",
         mais1secaoIngredientes: false,
+        mais1secaoModoPreparo: true,
+        ingredientes: [
+            [
+                '500 g de grãos de milho nixtamalizado (hominy), disponível em lojas de produtos mexicanos',
+                '500 g de carne de porco (lombo, pernil ou costela)',
+                '2 dentes de alho',
+                '1 cebola média',
+                '2 folhas de louro',
+                '2 litros de água',
+                'Sal a gosto'
+            ]
+        ],
+        modoPreparo: [
+            [
+                'Molho (pozole rojo)',
+                '3 pimentas secas guajillo',
+                '2 pimentas ancho',
+                '2 tomates maduros',
+                '1 dente de alho',
+                '1 colher de chá de orégano seco',
+                '1 colher de chá de cominho em pó'
+            ],
+            [
+                'Acompanhamentos tradicionais',
+                'Rabanete fatiado',
+                'Alface ou repolho picado',
+                'Cebola roxa picada',
+                '1 dente de alho',
+                'Tortilhas de milho tostadas',
+                'Limão cortado em gomos',
+                'Pimenta em pó ou molho de pimenta'
+            ],
+            [
+                'Modo de Preparo',
+                'Se estiver usando milho seco, lave bem e cozinhe em água com uma pitada de cal virgem (nixtamalização). Se usar hominy enlatado, basta escorrer e lavar os grãos.',
+                'Em uma panela grande, coloque a carne de porco, a cebola, o alho e as folhas de louro.',
+                'Cubra com água e cozinhe em fogo médio até a carne ficar macia (aprox. 1h30).',
+                'Retire a carne, desfie em pedaços médios e reserve o caldo.',
+                'Hidrate as pimentas secas em água quente por 20 minutos.',
+                'Bata no liquidificador com tomate, alho, orégano e cominho até formar um molho liso.',
+                'Coe para eliminar resíduos das cascas das pimentas.',
+                'Volte a carne desfiada para o caldo da panela.',
+                'Adicione o milho e o molho vermelho.',
+                'Cozinhe por mais 30 minutos em fogo baixo, ajustando sal e temperos.',
+                'Sirva o pozole quente, acompanhado de rabanete, repolho, cebola picada, limão e tortilhas tostadas. Cada pessoa pode personalizar o prato conforme o gosto.'
+            ]
+        ]
+    },
+
+    guacamole: {
+        nome: "",
+        categoria: "Caldos",
+        descricao: "",
+        mais1secaoIngredientes: false,
+        mais1secaoModoPreparo: false,
+        ingredientes: [],
+        modoPreparo: []
+    }
+
+    exemplo: {
+        nome: "",
+        categoria: "Caldos",
+        descricao: "",
+        mais1secaoIngredientes: false,
+        mais1secaoModoPreparo: false,
         ingredientes: [],
         modoPreparo: []
     }
