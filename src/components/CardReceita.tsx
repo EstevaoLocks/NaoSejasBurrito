@@ -10,7 +10,8 @@ type Receita = {
     nome: string;
     categoria: "Lanches" | "Caldos" | "Molhos" | "Petiscos";
     descricao: string;
-    ingredientes: string[];
+    mais1secaoIngredientes: boolean;
+    ingredientes: string[][];
     modoPreparo: string[];
 }
 
@@ -19,6 +20,37 @@ const txtReceitas: Record<string, Receita>= {
         nome: "Tacos",
         categoria: "Lanches",
         descricao: "Tacos são pratos típicos da culinária mexicana, feitos com tortillas de milho ou trigo recheadas com carne, frango, peixe ou vegetais. São servidos com molhos e acompanhamentos como cebola, tomate e guacamole.",
+        mais1secaoIngredientes: true,
+        ingredientes: [['Massa',
+                '2 xícaras de farinha de milho pré-cozida da marca venezuelana PAN (branco ou amarelo)',
+                '2 xícaras de água (480 mililitros)',
+                '1 colher de sopa de manteiga (opcional)',
+                '1 colher de chá de sal (colher rasa)'
+            ],
+            [ 'Recheio',
+                '½ quilograma de carne de porco para grelhar ou fritar',
+                '1 colher de chá de sal grosso',
+                '1 cebola roxa picada',
+                'suco de limão',
+            ]
+        ],
+        modoPreparo: [
+            'Prepare a massa de taco caseira (que também pode ser usada como massa burrito): coloque a água e a manteiga (opcional) numa tigela e, pouco a pouco, enquanto mexe com a mão, adicione a farinha e o sal. Misture e amasse bem para desfazer os grumos.',
+            'À medida que mistura e amassa, poderá sentir que a massa de tacos está ficando mais consistente. Após amassar por 5 minutos, modele em forma de bola e reserve na geladeira por 10 minutos.',
+            'Após esse tempo pegue novamente na massa e volte a amassar. Separe porções, modele em forma de bolinhas e coloque num prato.',
+            'Coloque uma das bolinhas de massa numa tábua de cozinha forrada com plástico filme, para não grudar. Espalme a bolinha de massa com a mão, cubra com um pedaço de plástico filme e abra com a ajuda de um rolo.',
+            'Desgrude o plástico de cima e use uma tigela para cortar o disco de massa, como na foto. Coloque num prato e repita o procedimento com as restantes bolinhas de massa para tacos, empilhando os discos de massa no prato.',
+            'Para cozinhar a massa de tacos simplesmente leve ao fogo alto uma frigideira (sem untar) e coloque um disco de massa. Deixe até dourar, vire e deixe por mais uns segundinhos, para dourar desse lado também. Retire para um prato ou grade de resfriamento e repita.',
+            'Enquanto isso prepare o recheio de carne do taco mexicano! Para simplificar o preparo sugerimos simplesmente fritar ou grelhar carne de porco da sua preferência, temperando com sal e suco de limão. Depois retire e pique em pedacinhos, como na foto.',
+            'Finalmente monte os tacos mexicanos: coloque uma porção de carne no centro da massa, e adicione cebola roxa picada. Se quiser, poderá completar também com guacamole, alface, queijo cheddar ou oaxaca (queijo branco mexicano). Sirva com uma cervejinha e bom apetite!'
+        ]
+    },
+
+    exemplo: {
+        nome: '',
+        categoria: 'Caldos',
+        descricao: '',
+        mais1secaoIngredientes: false,
         ingredientes: [],
         modoPreparo: []
     }
