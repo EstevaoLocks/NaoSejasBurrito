@@ -46,6 +46,40 @@ const txtReceitas: Record<string, Receita>= {
         ]
     },
 
+    chiliMexicano: {
+        nome: "Chili Mexicano",
+        categoria: "Caldos",
+        descricao: "O Chili Mexicano é um prato tradicional da culinária mexicana, conhecido por sua combinação de sabores picantes e reconfortantes. Ele é feito com carne moída, feijão, tomate, cebola e uma variedade de temperos, como cominho, pimenta chili e alho.",
+        mais1secaoIngredientes: false,
+        ingredientes: [
+            [
+                '1 ½ xícara (chá) de feijão-rosinha',
+                '1 cebola bem picada',
+                '3 colheres (sopa) de óleo',
+                '500 gramas de coração de alcatra moído',
+                '3 dentes de alho amassado',
+                '1 colher (chá) de mix d e pimentas: 1 colher (chá) de pimenta vermelha seca + 1 colher (chá) de pimenta- do- reino e pimenta branca + 1 colher (chá) de pimenta jamaicana',
+                '2 ½ tomates',
+                '2 colheres (chá) de sal',
+                '1 colher (sopa) de páprica doce',
+                '1 colher (chá) de cominho',
+                'Pimenta do reino a gosto'
+            ]
+        ],
+        modoPreparo: [
+            'Primeiramente, lave o feijão e despeje em uma panela de pressão. Cubra com água a panela.',
+            'Leve ao fogo até que pegue pressão. A partir daí, deixe no máximo por mais 20 minutos em fogo alto.',
+            'Logo em seguida, coe o feijão e reserve.',
+            'Em uma panela, coloque o óleo e refogue o alho e a cebola e acrescente a carne moída.',
+            'Mexa até que comece a dessorar a carne.',
+            'Então, acrescente uma colher ( chá) do mix de pimentas e misture. A pimenta aqui é a gosto, você pode usar na Receita de Chilli Mexicano as que mais tem costume.',
+            'Por fim, assim que a carne estiver dourada, acrescente os tomates, a páprica doce e o cominho. Deixe cozinhar por 20 minutos.',
+            'Se precisar, acrescente um pouco de água. Prove o sal e acrescente os grãos do feijão.',
+            'Deixe a Receita de Chilli Mexicano cozinhar por mais 10 minutos e desligue o fogo. Salpique salsinha ou queijo por cima, fica ótimo.',
+            'Sirva com as tortillhas e salsa mexicana, fica delicioso.'
+        ]
+    },
+
     exemplo: {
         nome: '',
         categoria: 'Caldos',
