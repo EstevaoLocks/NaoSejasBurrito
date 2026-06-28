@@ -142,23 +142,67 @@ const txtReceitas: Record<string, Receita>= {
     },
 
     guacamole: {
-        nome: "",
-        categoria: "Caldos",
-        descricao: "",
+        nome: "Guacamole",
+        categoria: "Molhos",
+        descricao: "Guacamole é um molho feito com abacate, tomate, cebola, alho e limão. É uma das comidas mais populares da culinária mexicana e pode ser servido como acompanhamento ou como base para outros pratos.",
         mais1secaoIngredientes: false,
         mais1secaoModoPreparo: false,
-        ingredientes: [],
-        modoPreparo: []
-    }
+        ingredientes: [
+            [
+                '2 avocados maduros (ou abacates)',
+                '3 pimentas jalapeño',
+                '2 dentes de alho com casca',
+                '1 tomate pequeno maduro (opcional)',
+                '1 cebola-roxa pequena',
+                'Caldo de 1 limão-taiti',
+                'Caldo de 1 limão-taiti',
+                '1/4 de colher de chá de sal (ou a gosto)',
+                '1/4 de colher de chá de pimenta-do-reino (ou a gosto)'
+            ]
+        ],
+        modoPreparo: [
+            [
+                'Higienize os vegetais e seque-os com papel-toalha. Retire as sementes do tomate e pique em cubos pequenos. Descasque e pique a cebola em cubinhos. Junte os ingredientes na bancada;',
+                'Em uma frigideira quente, no fogo médio-alto, coloque as pimentas jalapeño e os dentes de alho com casca. Toste levemente os ingredientes, mexendo às vezes para não queimar; ',
+                'Retire os ingredientes da frigideira. Descasque o alho e pique-o em cubos. Retire o talo das pimentas e pique-as em cubos pequenos. Se não quiser um preparo tão apimentado, retire as sementes das pimentas. Abra os avocados, descarte os caroços e extraia a polpa com uma colher. Pique o alho e a cebola;',
+                'Transfira o avocado para uma tigela e amasse com um garfo, até ficar cremoso. Adicione o tomate, a cebola, as pimentas e os dentes de alho picados, misturando bem para incorporar;',
+                'Tempere com o suco do limão, sal e pimenta-do-reino. Misture novamente;',
+                'Finalize com o coentro fresco picado e sirva. A dica é servir com tortilhas ou torradinhas, fica delicioso. Aproveite!'
+            ]
+        ]
+    },
 
-    exemplo: {
-        nome: "",
-        categoria: "Caldos",
-        descricao: "",
+    banderillasMexicanas: {
+        nome: "Banderillas Mexicanas",
+        categoria: "Petiscos",
+        descricao: "Banderillas Mexicanas são petiscos típicos da culinária mexicana, feitos com carne de porco temperada e servidos com pimenta. São uma excelente opção para aperitivos e refeições rápidas.",
         mais1secaoIngredientes: false,
         mais1secaoModoPreparo: false,
-        ingredientes: [],
-        modoPreparo: []
+        ingredientes: [
+            [
+                '12 salsichas de cachorro-quente',
+                '12 gravetos de madeira12 gravetos de madeira',
+                '1/2 xícara de farinha',
+                '1/2 xícara de farinha de milho (maseca)',
+                '1 colher de sopa de sal',
+                '1/2 colher de sopa de pimenta',
+                '1/2 colher de sopa de pimenta',
+                '1/2 colher de sopa de pimenta',
+                '1/2 colher de sopa de pimenta',
+                'Óleo necessário para fritar'
+            ]
+        ],
+        modoPreparo: [
+            [
+                'Misture as farinhas, o sal e a pimenta em uma tigela. (você também pode usar batata cozida em vez de farinha)',
+                'Adicione o leite, o ovo e a colher de óleo.',
+                'Bata até obter uma massa lisa e homogênea.',
+                'Coloque as linguiças de cachorro-quente nos palitos e banhe-as na massa, escorra um pouco na tigela para que não pinge no óleo.',
+                'Frite as linguiças no óleo quente por 2 ou 3 minutos até que fiquem douradas.',
+                'Se o óleo não cobrir, vire para que frite igualmente de todos os lados.',
+                'Remova do óleo e escorra em um papel toalha para absorver o excesso de óleo.'
+            ]
+        ]
     }
 };
 
