@@ -4,6 +4,7 @@ import { Navbar } from './components/Navbar'
 import { CardReceita } from './components/CardReceita'
 import { CardPreviewReceita1 } from './components/CardPreviewReceita1'
 import { CardPreviewReceita2 } from './components/CardPreviewReceita2'
+import { Footer } from './components/Footer'
 
 // Imagens
 import burritoPratoSemFundo from './assets/img/burrito_prato_semFundo.png'
@@ -99,12 +100,31 @@ function App() {
           <CardReceita receita="taco" />
         </section>
 
-        <section>
+        <section id="pratosTipicos" className="sectionPratosTipicos">
           <CardPreviewReceita1 receita="guacamole" versao="v1"/>
           <CardPreviewReceita2 receita="chiliMexicano" versao="v2"/>
           <CardPreviewReceita1 receita="pozole" versao="v1"/>
         </section>
+
+        {/* Section Newsletter */ }
+        <section className="newsletterSection">
+            <header>
+                <h2 className="titleTertiary">Não fique por fora, assine nossa Newsletter!</h2>
+                
+                <div className="logo-container">
+                    <a href="#pageHeader"><h2 className="logo">Não sejas burrito!</h2></a>
+                </div>
+            </header>
+            <p className="posSubtitleTertiary">Receba um email sempre que postarmos uma receita nova!</p>
+            <form action="">
+                <label htmlFor="email">Digite aqui:</label>
+                <input id="email" type="email" placeholder="Digite seu email" required />
+                <button type="submit">Inscrever-se</button>
+            </form>
+        </section>
       </main>
+
+      <Footer />
     </>
   )
 }
