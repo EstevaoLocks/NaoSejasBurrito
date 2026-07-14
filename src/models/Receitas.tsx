@@ -18,7 +18,7 @@ export class Receitas {
             imgSrc: "./../assets/img/tacosMexicanos.png",
             nome: "Tacos",
             categoria: "Lanches",
-            descricao: "Tacos são pratos típicos da culinária mexicana, feitos com tortillas de milho ou trigo recheadas com carne, frango, peixe ou vegetais. São servidos com molhos e acompanhamentos como cebola, tomate e guacamole.",
+            descricao: "O taco é um dos pratos mais conhecidos e amados do México. Ele é feito com uma tortilla de milho ou trigo recheada com carne, frango, peixe ou vegetais, acompanhada de diversos temperos e molhos.",
             mais1secaoIngredientes: true,
             mais1secaoModoPreparo: false,
             ingredientes: [
@@ -334,5 +334,5 @@ export class Receitas {
         // Retorno do metodo
         return retornoGet;
 
-    }
+    }// end getReceita
 }

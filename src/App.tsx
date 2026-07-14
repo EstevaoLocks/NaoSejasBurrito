@@ -2,6 +2,8 @@ import './styles/reset.css'
 import './styles/App.css'
 import { Navbar } from './components/Navbar'
 import { CardReceita } from './components/CardReceita'
+import { CardPreviewReceita1 } from './components/CardPreviewReceita1'
+import { CardPreviewReceita2 } from './components/CardPreviewReceita2'
 
 // Imagens
 import burritoPratoSemFundo from './assets/img/burrito_prato_semFundo.png'
@@ -93,8 +95,14 @@ function App() {
         </section>
         
         <section id="receitaSemana" className="receitasSemana-section">
-            <h2 className="titleSecondary">Receita da Semana</h2>
-            <CardReceita receita="taco" />
+          <h2 className="titleSecondary">Receita da Semana</h2>
+          <CardReceita receita="taco" />
+        </section>
+
+        <section>
+          <CardPreviewReceita1 receita="guacamole" versao="v1"/>
+          <CardPreviewReceita2 receita="chiliMexicano" versao="v2"/>
+          <CardPreviewReceita1 receita="pozole" versao="v1"/>
         </section>
       </main>
     </>
